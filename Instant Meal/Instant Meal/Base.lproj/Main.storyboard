@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239" y="-952"/>
+            <point key="canvasLocation" x="-972" y="-922"/>
         </scene>
         <!--Scan QR-->
         <scene sceneID="x1q-oN-YZF">
@@ -76,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efU-G4-qS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1206" y="-649"/>
+            <point key="canvasLocation" x="-972" y="625"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="JaB-O9-4JV">
@@ -93,7 +92,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5A-bl-Qh2">
-                                <rect key="frame" x="0.0" y="220" width="375" height="398"/>
+                                <rect key="frame" x="0.0" y="289.5" width="375" height="328.5"/>
                                 <connections>
                                     <segue destination="HR4-mW-J92" kind="embed" id="QKW-6W-mmq"/>
                                 </connections>
@@ -105,12 +104,26 @@
                                     <constraint firstAttribute="width" constant="100" id="tav-tp-cxs"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4d-XN-X5q">
+                                <rect key="frame" x="117.5" y="214.5" width="140" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="evw-2g-9Nn"/>
+                                    <constraint firstAttribute="height" constant="40" id="sXx-ss-3uG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="18"/>
+                                <state key="normal" title="Check Blance">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="D4d-XN-X5q" firstAttribute="centerX" secondItem="MFb-0h-I6T" secondAttribute="centerX" id="0kp-FW-gl4"/>
                             <constraint firstItem="LwK-P3-gaf" firstAttribute="top" secondItem="Fsh-Jk-WAM" secondAttribute="bottom" constant="10" id="3JU-hj-RhU"/>
+                            <constraint firstItem="r5A-bl-Qh2" firstAttribute="top" secondItem="D4d-XN-X5q" secondAttribute="bottom" constant="35" id="CGG-WV-XTM"/>
                             <constraint firstItem="r5A-bl-Qh2" firstAttribute="leading" secondItem="87O-BM-f8i" secondAttribute="leading" id="GaO-5T-w6a"/>
-                            <constraint firstItem="r5A-bl-Qh2" firstAttribute="top" secondItem="LwK-P3-gaf" secondAttribute="bottom" constant="20" id="Yz1-hX-zSg"/>
+                            <constraint firstItem="D4d-XN-X5q" firstAttribute="top" secondItem="LwK-P3-gaf" secondAttribute="bottom" constant="15" id="Ksh-aX-nQb"/>
                             <constraint firstItem="Fsh-Jk-WAM" firstAttribute="top" secondItem="87O-BM-f8i" secondAttribute="top" constant="20" id="d9T-0z-Vdv"/>
                             <constraint firstItem="87O-BM-f8i" firstAttribute="trailing" secondItem="LwK-P3-gaf" secondAttribute="trailing" constant="60" id="dC5-Y7-9ci"/>
                             <constraint firstItem="r5A-bl-Qh2" firstAttribute="trailing" secondItem="87O-BM-f8i" secondAttribute="trailing" id="iw4-j9-wVS"/>
@@ -123,19 +136,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="j9B-hc-YRJ"/>
                     <connections>
+                        <outlet property="btnCheckBlance" destination="D4d-XN-X5q" id="RYS-wQ-pQM"/>
                         <outlet property="lblProfileImage" destination="Fsh-Jk-WAM" id="0GX-b8-veh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYc-9A-f95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3484" y="-338.68065967016497"/>
+            <point key="canvasLocation" x="487" y="-152"/>
         </scene>
         <!--Account Table View Controller-->
         <scene sceneID="i27-c8-1bW">
             <objects>
                 <tableViewController id="HR4-mW-J92" customClass="AccountTableViewController" customModule="Instant_Meal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="45" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jyM-Pj-7BV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="398"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="328.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <sections>
@@ -258,7 +272,7 @@
                                         <rect key="frame" x="0.0" y="365" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1VJ-2M-GrC" id="6A4-F1-Ruv">
-                                            <rect key="frame" x="0.0" y="0.0" width="348" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="356" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qr9-A7-Fpy">
@@ -289,34 +303,27 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hoo-8I-9YI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4340" y="-339"/>
+            <point key="canvasLocation" x="1255" y="-152"/>
         </scene>
         <!--Search-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Instant_Meal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="SearchViewController" customModule="Instant_Meal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="86.5" y="312" width="202" height="43"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="363" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search view controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X44-FE-ouu">
+                                <rect key="frame" x="83" y="320.5" width="209.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="X44-FE-ouu" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="2xj-No-43a"/>
+                            <constraint firstItem="X44-FE-ouu" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="W83-Pl-EoG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
@@ -324,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="644" y="644"/>
+            <point key="canvasLocation" x="-2556" y="624.73763118440786"/>
         </scene>
         <!--Favorite-->
         <scene sceneID="kks-3l-Jx5">
@@ -359,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTV-Gs-nou" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1390" y="644"/>
+            <point key="canvasLocation" x="-1748" y="625"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -399,7 +406,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x4Z-g9-00d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2544.8000000000002" y="-338.68065967016497"/>
+            <point key="canvasLocation" x="-241" y="-152"/>
         </scene>
     </scenes>
     <resources>

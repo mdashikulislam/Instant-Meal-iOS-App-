@@ -1,0 +1,16 @@
+PODS:
+  - YNSearch (2.4.0)
+
+DEPENDENCIES:
+  - YNSearch
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - YNSearch
+
+SPEC CHECKSUMS:
+  YNSearch: 56d4aad4547fd1efce355cccc220a94735b1ea14
+
+PODFILE CHECKSUM: 0837484fb751dd0cc42d8030a5f6d8fd13a815c0
+
+COCOAPODS: 1.6.1

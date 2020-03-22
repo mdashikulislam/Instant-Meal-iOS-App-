@@ -1,0 +1,6 @@
+framework module Pods_Instant_Meal {
+  umbrella header "Pods-Instant Meal-umbrella.h"
+
+  export *
+  module * { export * }
+}
